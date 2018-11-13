@@ -12,6 +12,8 @@ namespace NewFranceVacanceUWP.ViewModel
 {
     class BoligViewModel : INotifyPropertyChanged
     {
+        #region Test binding / commands   
+        //TODO: Opdater så det virker med collection etc
         public BoligCatalog BoligCatalog { get; set; }
         private RelayCommand _buttonRelayCommand;
 
@@ -43,6 +45,7 @@ namespace NewFranceVacanceUWP.ViewModel
         {
             TextBlockText = "tadaa";
         }
+        #endregion
 
         //TODO: Commands, Binding, Test serialization, GUI, RelayCommand??
 
