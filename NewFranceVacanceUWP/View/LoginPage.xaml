@@ -9,19 +9,23 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Vertical">
+        <Grid.Background>
+            <ImageBrush ImageSource="../Assets/Background2.jpg"/>
+        </Grid.Background>
+        <Image Source="../Assets/FranceVacancesLogo.png" HorizontalAlignment="Left" Height="260" Margin="0,-65,0,0" VerticalAlignment="Top" Width="294"/>
+        <StackPanel  BorderBrush="Black" BorderThickness="1" Background="White" HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Vertical" Height="100" Margin="0,0,0,0" Width="219">
             <StackPanel Orientation="Horizontal">
-                <TextBlock Text="Username:"/>
-                <TextBox Name="UserNameBox"/>
+                <TextBlock Text="Username:" />
+                <TextBox Margin="4" Name="UserNameBox" BorderBrush="Black" BorderThickness="1"/>
             </StackPanel>
-            <StackPanel Orientation="Horizontal">
-                <TextBlock Text="Password:"/>
+            <StackPanel Orientation="Horizontal" >
+                <TextBlock><Run Text="Password"/><Run Text=" "/><Run Text=":"/></TextBlock>
                 <StackPanel Orientation="Horizontal">
-                    <PasswordBox Name="PasswordBox"/>
-                    <Button Name="LoginButton" Content="Login"/>
+                    <PasswordBox Margin="4" BorderBrush="Black" BorderThickness="1" Name="PasswordBox"/>
+                    <Button Name="LoginButton" Content="Login" BorderBrush="Black" BorderThickness="1" />
                 </StackPanel>
             </StackPanel>
-            <TextBlock Name="MessageBox"/>
+            <TextBlock Name="MessageBox" VerticalAlignment="Center"/>
         </StackPanel>
     </Grid>
 </Page>
