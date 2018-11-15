@@ -14,7 +14,7 @@ namespace NewFranceVacanceUWP.ViewModel
 {
     class UserViewModel : INotifyPropertyChanged
     {
-        private User _tempUser = new User("","");
+        private User _tempUser;
 
         private string _message = "";
         public string Message
@@ -42,17 +42,20 @@ namespace NewFranceVacanceUWP.ViewModel
             Message = "TestMessage!";
 
 
-        
-
-
         }
 
 
-        public string CheckCredentials()
+        public void CheckCredentials()
         {
-            //TODO: check logins vs collection
-            return Message;
+            foreach (User u in UserCatalog.Users)
+            {
+                if (u.Equals(_tempUser))
+                {
+                    Message = "Login Successful";
+                }
+            }
         }
+
 
         public event PropertyChangedEventHandler PropertyChanged;
 
