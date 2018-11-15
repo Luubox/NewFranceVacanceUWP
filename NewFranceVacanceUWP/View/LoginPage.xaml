@@ -5,8 +5,13 @@
     xmlns:local="using:NewFranceVacanceUWP.View"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewModel="using:NewFranceVacanceUWP.ViewModel"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Page.DataContext>
+        <viewModel:UserViewModel/>
+    </Page.DataContext>
 
     <Grid>
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Vertical">
@@ -18,10 +23,10 @@
                 <TextBlock Text="Password:"/>
                 <StackPanel Orientation="Horizontal">
                     <PasswordBox Name="PasswordBox"/>
-                    <Button Name="LoginButton" Content="Login"/>
+                    <Button Name="LoginButton" Content="Login" Command="{Binding LoginCommand}"/>
                 </StackPanel>
             </StackPanel>
-            <TextBlock Name="MessageBox"/>
+            <TextBlock Name="MessageBox" Text="{Binding Message, Mode=TwoWay}"/>
         </StackPanel>
     </Grid>
 </Page>

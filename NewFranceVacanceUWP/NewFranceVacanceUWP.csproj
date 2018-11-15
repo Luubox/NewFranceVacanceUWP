@@ -107,6 +107,7 @@
     <Compile Include="Model\User.cs" />
     <Compile Include="Model\UserCatalog.cs" />
     <Compile Include="Persistency\PersistencyService.cs" />
+    <Compile Include="Properties\Annotations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModel\BoligViewModel.cs" />
     <Compile Include="ViewModel\UserViewModel.cs" />

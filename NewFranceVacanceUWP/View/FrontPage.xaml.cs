@@ -31,5 +31,10 @@ namespace NewFranceVacanceUWP.View
         {
             Frame.Navigate(typeof(BoligPage));
         }
+
+        private void LoginButton_OnClick(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(LoginPage));
+        }
     }
 }
