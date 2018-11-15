@@ -23,10 +23,16 @@ namespace NewFranceVacanceUWP.Model
 
             //default users
             User defaultUser1 = new User("admin", "admin");
-            User defaultUser2 = new User("user", "password");
+            User defaultUser2 = new User("username", "password");
             User defaultUser3 = new User("ebbevang", "ebbevang");
             User defaultUser4 = new User("heho", "heho");
             User defaultUser5 = new User("test123", "test123");
+
+            Users.Add(defaultUser1);
+            Users.Add(defaultUser2);
+            Users.Add(defaultUser3);
+            Users.Add(defaultUser4);
+            Users.Add(defaultUser5);
         }
 
         public void Add(string userName, string passWord)

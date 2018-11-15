@@ -11,9 +11,12 @@ namespace NewFranceVacanceUWP.Model
         private string _userName;
         private string _passWord;
 
-        public string UserName { get => _userName; }
+        public string UserName { get => _userName;
+            set => _userName = value;
+        }
         public string PassWord { get => _passWord; set => _passWord = value; }
 
+        public User() { }
         public User(string userName, string passWord)
         {
             _userName = userName;

@@ -17,20 +17,30 @@
         <Grid.Background>
             <ImageBrush ImageSource="../Assets/Background2.jpg"/>
         </Grid.Background>
-        <Image Source="../Assets/FranceVacancesLogo.png" HorizontalAlignment="Left" Height="260" Margin="0,-65,0,0" VerticalAlignment="Top" Width="294"/>
+
+        <Image Source="../Assets/FranceVacancesLogo.png" Height="260" Width="294" Margin="0,-65,0,0"  
+               HorizontalAlignment="Left" VerticalAlignment="Top" />
+
         <StackPanel  BorderBrush="Black" BorderThickness="1" Background="White" HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Vertical" Height="100" Margin="0,0,0,0" Width="219">
+           
             <StackPanel Orientation="Horizontal">
                 <TextBlock Text="Username:" />
-                <TextBox Margin="4" Name="UserNameBox" BorderBrush="Black" BorderThickness="1"/>
+                <TextBox Name="UserNameBox" BorderBrush="Black" BorderThickness="1" Margin="4" 
+                         Text="{Binding TempUser.UserName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
             </StackPanel>
+            
             <StackPanel Orientation="Horizontal" >
-                <TextBlock><Run Text="Password"/><Run Text=" "/><Run Text=":"/></TextBlock>
+                <TextBlock Text="Password:" />
                 <StackPanel Orientation="Horizontal">
-                    <PasswordBox Name="PasswordBox"/>
-                    <Button Name="LoginButton" Content="Login" Command="{Binding LoginCommand}"/>
+                    <PasswordBox Name="PasswordBox" 
+                                 Password="{Binding TempUser.PassWord, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <Button Name="LoginButton" Content="Login" 
+                            Command="{Binding LoginCommand}"/>
                 </StackPanel>
             </StackPanel>
-            <TextBlock Name="MessageBox" Text="{Binding Message, Mode=TwoWay}"/>
+           
+            <TextBlock Name="MessageBox" 
+                       Text="{Binding Message, Mode=TwoWay}"/>
         </StackPanel>
     </Grid>
 </Page>
