@@ -14,7 +14,9 @@
     </Page.DataContext>
 
     <Grid>
-        <TextBlock Text="BoligPage test"/>
+        <Grid.Background>
+            <ImageBrush ImageSource="../Assets/Background2.jpg"/>
+        </Grid.Background>
 
         <Image Source="../Assets/FranceVacancesLogo.png" HorizontalAlignment="Left" Height="260" Margin="0,-65,0,0" VerticalAlignment="Top" Width="294"/>
 
