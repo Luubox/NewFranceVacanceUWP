@@ -14,23 +14,13 @@
     </Page.DataContext>
 
     <Grid>
-<<<<<<< HEAD
         <TextBlock Text="BoligPage test"/>
-        <Button Name="BoligPageButton" Content="boligpage button" Click="BoligPageButton_OnClick"/>
-        <ListView ItemsSource="{Binding }">
 
-        </ListView>
-=======
-
-        <Grid.Background>
-            <ImageBrush ImageSource="../Assets/Background2.jpg"/>
-        </Grid.Background>
         <Image Source="../Assets/FranceVacancesLogo.png" HorizontalAlignment="Left" Height="260" Margin="0,-65,0,0" VerticalAlignment="Top" Width="294"/>
 
         <TextBox Height="25" Width="600" HorizontalAlignment="Left" Margin="40,119,0,0" Text="Destination" VerticalAlignment="Top" SelectionHighlightColorWhenNotFocused="{x:Null}" FocusVisualSecondaryBrush="{x:Null}" FocusVisualPrimaryBrush="{x:Null}" BorderBrush="Black" Background="White" FontStyle="Italic"/>
         <Button Content="Search" HorizontalAlignment="Left" Margin="660,119,0,0" VerticalAlignment="Top" BorderBrush="Black" Background="White"/>
 
         <Button Name="BoligPageButton" Content="boligpage button" Click="BoligPageButton_OnClick" Background="White"/>
->>>>>>> 9c3c1dc84edcab32146f82fcc4d785532a16ed5d
     </Grid>
 </Page>

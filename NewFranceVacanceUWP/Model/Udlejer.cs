@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace NewFranceVacanceUWP.Model
 {
-    class Udlejer : User
+    class Udlejer
     {
     }
 }
