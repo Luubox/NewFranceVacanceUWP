@@ -26,8 +26,8 @@
             <StackPanel Orientation="Horizontal" >
                 <TextBlock><Run Text="Password"/><Run Text=" "/><Run Text=":"/></TextBlock>
                 <StackPanel Orientation="Horizontal">
-                    <PasswordBox Name="PasswordBox"/>
-                    <Button Name="LoginButton" Content="Login" Command="{Binding LoginCommand}"/>
+                    <PasswordBox BorderBrush="Black" BorderThickness="1" Margin="4" Name="PasswordBox"/>
+                    <Button BorderBrush="Black" BorderThickness="1" Name="LoginButton" Content="Login" Command="{Binding LoginCommand}" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Center"/>
                 </StackPanel>
             </StackPanel>
             <TextBlock Name="MessageBox" Text="{Binding Message, Mode=TwoWay}"/>
