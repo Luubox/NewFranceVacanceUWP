@@ -13,9 +13,9 @@
         <Grid.Background>
             <ImageBrush ImageSource="../Assets/Background2.jpg"/>
         </Grid.Background>
-        <Image Source="../Assets/FranceVacancesLogo.png" HorizontalAlignment="Left" Height="309" Margin="0,-65,0,0" VerticalAlignment="Top" Width="350"/>
+        <Image Source="../Assets/FranceVacancesLogo.png" HorizontalAlignment="Left" Height="260" Margin="0,-65,0,0" VerticalAlignment="Top" Width="294"/>
         <TextBox Height="25" Width="600" HorizontalAlignment="center" Margin="0,0,0,0" Text="Destination" VerticalAlignment="center" SelectionHighlightColorWhenNotFocused="{x:Null}" FocusVisualSecondaryBrush="{x:Null}" FocusVisualPrimaryBrush="{x:Null}" BorderBrush="Black" Background="White" FontStyle="Italic"/>
-        <Button Content="Search" HorizontalAlignment="Left" Margin="1265,0,0,0" VerticalAlignment="Center" BorderBrush="Black" Background="White"/>
+        <Button Content="Search" HorizontalAlignment="Left" Margin="960,0,0,0" VerticalAlignment="Center" BorderBrush="Black" Background="White"/>
         <Button Name="DeBug" Content="Frontpage Button" Click="FrontPageButton_OnClick" HorizontalAlignment="Left" Margin="86,623,0,0" VerticalAlignment="Top" Background="White" BorderBrush="Black"/>
 
     </Grid>
