@@ -10,9 +10,9 @@ namespace NewFranceVacanceUWP.Model
 {
     class BoligCatalog : PersistencyService
     {
-        private BoligCatalog _instance = new BoligCatalog();
+        private static BoligCatalog _instance = new BoligCatalog();
 
-        public BoligCatalog Instance
+        public static BoligCatalog Instance
         {
             get { return _instance; }
         }

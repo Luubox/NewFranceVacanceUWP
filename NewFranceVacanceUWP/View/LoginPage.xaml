@@ -1,23 +1,14 @@
 ﻿<Page
-    x:Class="NewFranceVacanceUWP.View.BoligPage"
+    x:Class="NewFranceVacanceUWP.View.LoginPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:NewFranceVacanceUWP.View"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:viewModel="using:NewFranceVacanceUWP.ViewModel"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Page.DataContext>
-        <viewModel:BoligViewModel />
-    </Page.DataContext>
-
     <Grid>
-        <TextBlock Text="BoligPage test"/>
-        <Button Name="BoligPageButton" Content="boligpage button" Click="BoligPageButton_OnClick"/>
-        <ListView ItemsSource="{Binding }">
 
-        </ListView>
     </Grid>
 </Page>

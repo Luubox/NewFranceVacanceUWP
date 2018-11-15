@@ -6,14 +6,7 @@ using System.Threading.Tasks;
 
 namespace NewFranceVacanceUWP.Model
 {
-    class User
+    class UserCatalog
     {
-        private string _userName;
-        private string _passWord;
-
-        public User()
-        {
-            
-        }
     }
 }
