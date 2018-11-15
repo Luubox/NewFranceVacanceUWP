@@ -9,6 +9,19 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Vertical">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Username:"/>
+                <TextBox Name="UserNameBox"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Password:"/>
+                <StackPanel Orientation="Horizontal">
+                    <PasswordBox Name="PasswordBox"/>
+                    <Button Name="LoginButton" Content="Login"/>
+                </StackPanel>
+            </StackPanel>
+            <TextBlock Name="MessageBox"/>
+        </StackPanel>
     </Grid>
 </Page>
