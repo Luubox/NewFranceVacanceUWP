@@ -26,5 +26,15 @@ namespace NewFranceVacanceUWP.View
         {
             this.InitializeComponent();
         }
+
+        private void FrontButton_OnClick(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(FrontPage));
+        }
+
+        private void BoligButton_OnClick(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(BoligPage));
+        }
     }
 }

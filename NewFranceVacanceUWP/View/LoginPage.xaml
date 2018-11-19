@@ -24,13 +24,16 @@
             <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
 
+        <Image Name="PageLogoImage"  Source="../Assets/FranceVacancesLogo.png" 
+               HorizontalAlignment="Left" VerticalAlignment="Top"
+               Grid.Row="0"/>
+
         <Border  Grid.Row="1" Background="White" Opacity=".75" />
 
 
-        <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Top">
-
-            <Image Source="../Assets/FranceVacancesLogo.png" Height="260" Width="294" Margin="0,-65,0,0"  
-               HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <StackPanel Name="ContentStackPanel" 
+                    HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                    Grid.Row="1">
 
             <StackPanel  BorderBrush="Black" BorderThickness="1" Background="White" HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Vertical" Height="100" Margin="0,0,0,0" Width="219">
 
@@ -53,6 +56,20 @@
                 <TextBlock Name="MessageBox" 
                        Text="{Binding Message, Mode=TwoWay}"/>
             </StackPanel>
+            
+        </StackPanel>
+        <StackPanel Name="FooterStackPanel" Orientation="Horizontal"
+                    HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                    Grid.Row="2">
+
+            <Button Name="BoligButton" Content="Til Boliger" Click="BoligButton_OnClick" 
+                    HorizontalAlignment="Left" VerticalAlignment="Top" 
+                    Background="Gainsboro" BorderBrush="Black"/>
+
+            <Button Name="FrontButton" Content="Til Login" Click="FrontButton_OnClick" 
+                    HorizontalAlignment="Left" VerticalAlignment="Top" 
+                    Background="Gainsboro" BorderBrush="Black"/>
+
         </StackPanel>
     </Grid>
 </Page>
