@@ -13,19 +13,58 @@
         <viewModel:BoligViewModel />
     </Page.DataContext>
 
-    <Grid>
+    <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
         <Grid.Background>
             <ImageBrush ImageSource="../Assets/Background2.jpg"/>
         </Grid.Background>
 
-        <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Top">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
 
-            <Image Source="../Assets/FranceVacancesLogo.png" HorizontalAlignment="Left" Height="260" Margin="0,-65,0,0" VerticalAlignment="Top" Width="294"/>
 
-            <TextBox Height="25" Width="600" HorizontalAlignment="Left" Margin="40,119,0,0" Text="Destination" VerticalAlignment="Top" SelectionHighlightColorWhenNotFocused="{x:Null}" FocusVisualSecondaryBrush="{x:Null}" FocusVisualPrimaryBrush="{x:Null}" BorderBrush="Black" Background="White" FontStyle="Italic"/>
-            <Button Content="Search" HorizontalAlignment="Left" Margin="660,119,0,0" VerticalAlignment="Top" BorderBrush="Black" Background="White"/>
+        <Image Name="PageLogoImage"  Source="../Assets/FranceVacancesLogo.png" 
+               HorizontalAlignment="Left" VerticalAlignment="Top"
+               Grid.Row="0"/>
 
-            <Button Name="BoligPageButton" Content="boligpage button" Click="BoligPageButton_OnClick" Background="White"/>
+        <Border  Grid.Row="1" Background="White" Opacity=".75" />
+
+        <StackPanel Name="ContentStackPanel" 
+                    HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                    Grid.Row="1">
+
+            <StackPanel Name="SearchStackPanel" Orientation="Horizontal"
+                        HorizontalAlignment="Center" VerticalAlignment="Stretch"
+                        Margin="0,10,0,0">
+
+                <TextBox Name="SearchTextBox" Text="Destination"
+                         Width="500"
+                         HorizontalAlignment="Center" VerticalAlignment="Center" 
+                         BorderBrush="Black" Background="White" FontStyle="Italic"/>
+
+                <Button Name="SearchButton" Content="Search" 
+                        HorizontalAlignment="Left" Margin="5,0,0,0"
+                        BorderBrush="Black" Background="Gainsboro"/>
+
+            </StackPanel>
+
         </StackPanel>
+
+        <StackPanel Name="FooterStackPanel" Orientation="Horizontal"
+                    HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                    Grid.Row="2">
+
+            <Button Name="FrontButton" Content="Til Front Page" Click="FrontButton_OnClick" 
+                    HorizontalAlignment="Left" VerticalAlignment="Top" 
+                    Background="Gainsboro" BorderBrush="Black"/>
+
+            <Button Name="LoginButton" Content="Til Login" Click="LoginButton_OnClick" 
+                    HorizontalAlignment="Left" VerticalAlignment="Top" 
+                    Background="Gainsboro" BorderBrush="Black"/>
+
+        </StackPanel>
+
     </Grid>
 </Page>

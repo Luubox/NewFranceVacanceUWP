@@ -18,6 +18,15 @@
             <ImageBrush ImageSource="../Assets/Background2.jpg"/>
         </Grid.Background>
 
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+
+        <Border  Grid.Row="1" Background="White" Opacity=".75" />
+
+
         <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Top">
 
             <Image Source="../Assets/FranceVacancesLogo.png" Height="260" Width="294" Margin="0,-65,0,0"  
