@@ -18,29 +18,32 @@
             <ImageBrush ImageSource="../Assets/Background2.jpg"/>
         </Grid.Background>
 
-        <Image Source="../Assets/FranceVacancesLogo.png" Height="260" Width="294" Margin="0,-65,0,0"  
+        <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Top">
+
+            <Image Source="../Assets/FranceVacancesLogo.png" Height="260" Width="294" Margin="0,-65,0,0"  
                HorizontalAlignment="Left" VerticalAlignment="Top" />
 
-        <StackPanel  BorderBrush="Black" BorderThickness="1" Background="White" HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Vertical" Height="100" Margin="0,0,0,0" Width="219">
-           
-            <StackPanel Orientation="Horizontal">
-                <TextBlock Text="Username:" />
-                <TextBox Name="UserNameBox" BorderBrush="Black" BorderThickness="1" Margin="4" 
-                         Text="{Binding TempUser.UserName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
-            </StackPanel>
-            
-            <StackPanel Orientation="Horizontal" >
-                <TextBlock Text="Password:" />
+            <StackPanel  BorderBrush="Black" BorderThickness="1" Background="White" HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Vertical" Height="100" Margin="0,0,0,0" Width="219">
+
                 <StackPanel Orientation="Horizontal">
-                    <PasswordBox Name="PasswordBox" 
-                                 Password="{Binding TempUser.PassWord, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
-                    <Button Name="LoginButton" Content="Login" 
-                            Command="{Binding LoginCommand}"/>
+                    <TextBlock Text="Username:" />
+                    <TextBox Name="UserNameBox" BorderBrush="Black" BorderThickness="1" Margin="4" 
+                         Text="{Binding TempUser.UserName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
                 </StackPanel>
-            </StackPanel>
-           
-            <TextBlock Name="MessageBox" 
+
+                <StackPanel Orientation="Horizontal" >
+                    <TextBlock Text="Password:" />
+                    <StackPanel Orientation="Horizontal">
+                        <PasswordBox Name="PasswordBox" 
+                                 Password="{Binding TempUser.PassWord, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                        <Button Name="LoginButton" Content="Login" 
+                            Command="{Binding LoginCommand}"/>
+                    </StackPanel>
+                </StackPanel>
+
+                <TextBlock Name="MessageBox" 
                        Text="{Binding Message, Mode=TwoWay}"/>
+            </StackPanel>
         </StackPanel>
     </Grid>
 </Page>

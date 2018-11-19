@@ -18,11 +18,14 @@
             <ImageBrush ImageSource="../Assets/Background2.jpg"/>
         </Grid.Background>
 
-        <Image Source="../Assets/FranceVacancesLogo.png" HorizontalAlignment="Left" Height="260" Margin="0,-65,0,0" VerticalAlignment="Top" Width="294"/>
+        <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Top">
 
-        <TextBox Height="25" Width="600" HorizontalAlignment="Left" Margin="40,119,0,0" Text="Destination" VerticalAlignment="Top" SelectionHighlightColorWhenNotFocused="{x:Null}" FocusVisualSecondaryBrush="{x:Null}" FocusVisualPrimaryBrush="{x:Null}" BorderBrush="Black" Background="White" FontStyle="Italic"/>
-        <Button Content="Search" HorizontalAlignment="Left" Margin="660,119,0,0" VerticalAlignment="Top" BorderBrush="Black" Background="White"/>
+            <Image Source="../Assets/FranceVacancesLogo.png" HorizontalAlignment="Left" Height="260" Margin="0,-65,0,0" VerticalAlignment="Top" Width="294"/>
 
-        <Button Name="BoligPageButton" Content="boligpage button" Click="BoligPageButton_OnClick" Background="White"/>
+            <TextBox Height="25" Width="600" HorizontalAlignment="Left" Margin="40,119,0,0" Text="Destination" VerticalAlignment="Top" SelectionHighlightColorWhenNotFocused="{x:Null}" FocusVisualSecondaryBrush="{x:Null}" FocusVisualPrimaryBrush="{x:Null}" BorderBrush="Black" Background="White" FontStyle="Italic"/>
+            <Button Content="Search" HorizontalAlignment="Left" Margin="660,119,0,0" VerticalAlignment="Top" BorderBrush="Black" Background="White"/>
+
+            <Button Name="BoligPageButton" Content="boligpage button" Click="BoligPageButton_OnClick" Background="White"/>
+        </StackPanel>
     </Grid>
 </Page>
