@@ -13,7 +13,7 @@
         <viewModel:BoligViewModel />
     </Page.DataContext>
 
-    <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+    <Grid>
         <Grid.Background>
             <ImageBrush ImageSource="../Assets/Background2.jpg"/>
         </Grid.Background>
