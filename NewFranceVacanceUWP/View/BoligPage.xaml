@@ -31,26 +31,29 @@
 
         <Border  Grid.Row="1" Background="White" Opacity=".75" />
 
-        <StackPanel Name="ContentStackPanel" 
+        <Grid Name="ContentGrid" 
                     HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
                     Grid.Row="1">
 
-            <StackPanel Name="SearchStackPanel" Orientation="Horizontal"
-                        HorizontalAlignment="Center" VerticalAlignment="Stretch"
-                        Margin="0,10,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
 
-                <TextBox Name="SearchTextBox" Text="Destination"
-                         Width="500"
-                         HorizontalAlignment="Center" VerticalAlignment="Center" 
-                         BorderBrush="Black" Background="White" FontStyle="Italic"/>
+            <ListView Name="BoligListView" ItemsSource="{Binding BoligCatalog.BoligListe}"
+                      Grid.Column="0">
+                
+            </ListView>
+            <Pivot Name="BoligDetailsPivot" Title="Bind til selectedItem"
+                   Grid.Column="1">
+                <PivotItem Header="Info">
+                </PivotItem>
+                <PivotItem Header="Billeder">
+                </PivotItem>
+                <PivotItem Header="Kontakt">
+                </PivotItem></Pivot>
 
-                <Button Name="SearchButton" Content="Search" 
-                        HorizontalAlignment="Left" Margin="5,0,0,0"
-                        BorderBrush="Black" Background="Gainsboro"/>
-
-            </StackPanel>
-
-        </StackPanel>
+        </Grid>
 
         <StackPanel Name="FooterStackPanel" Orientation="Horizontal"
                     HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
