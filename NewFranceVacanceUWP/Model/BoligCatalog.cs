@@ -21,9 +21,21 @@ namespace NewFranceVacanceUWP.Model
 
         private BoligCatalog()
         {
-            BoligListe = new ObservableCollection<Bolig>(LoadBoligFromJsonAsync().Result);
+            BoligListe = new ObservableCollection<Bolig>();
+            LoadBoligListeAsync();
+        }
 
-            if (BoligListe.Count == 0)
+        private async void LoadBoligListeAsync()
+        {
+            var boligListe = await LoadBoligFromJsonAsync();
+            if (boligListe != null)
+            {
+                foreach (var b in boligListe)
+                {
+                    BoligListe.Add(b);
+                }
+            }
+            else
             {
                 Bolig defaultBolig1 = new Bolig(2, 1, "Lejlighed", 1, 40, "testvej 1, 1234 testcity", 5.0, false);
                 Bolig defaultBolig2 = new Bolig(4, 3, "Hytte", 2, 70, "testvej 2, 1234 testcity", 3.5, true);
